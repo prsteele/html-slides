@@ -1,0 +1,8 @@
+The goal of this project is to produce a slideshow framework in HTML
+5; this framework should completely replace the need for LaTeX's
+Beamer package. In particular, we will allow typesetting of LaTeX
+formula via Mathjax, and animations and slide transitions using D3.js.
+
+- Mathjax: rendering LaTeX with Javascript
+- D3.js: Data-driven Documents, a framework for manipulating HTML 5
+  pages (including SVG images) based on data
