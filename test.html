@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+
     <script type="text/javascript" 
 	    src="/home/prsteele/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
@@ -9,19 +11,24 @@
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
+    <input type="button" value="previous" onClick="previous()" />
+    <input type="button" value="next" onClick="next()" />
+
     <div class="slide" onClick="foo()">
-      <div>
-	<p>
-	  We can use standard $\LaTeX$ notation, such as $\int_a^b f(x) \;
-	  d x$. We can even get equation-style markup, such as
-	  \[
-	  \int_a^b f(x) \;d x.
-	  \]
-	</p>
-      </div>
+      We can use standard $\LaTeX$ notation, such as $\int_a^b f(x) \;
+      d x$.
+    </div>
+
+    <div class="slide">
+      We can even get equation-style markup, such as
+      \[
+      \int_a^b f(x) \;d x.
+      \]
     </div>
 
     <div class="slide">
@@ -35,9 +42,6 @@
     <div class="slide">
       And another.
     </div>
-
-    <input type="button" value="previous" onClick="previous()" />
-    <input type="button" value="next" onClick="next()" />
 
     <script type="text/javascript">
       init();
