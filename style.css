@@ -13,3 +13,16 @@
     border-width: 1px;
     padding: 1em 1em 1em 1em;
 }
+
+.slide ul, .slide ol {
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.unrevealed {
+    color: rgb(200, 200, 200);
+}
+
+.revealed {
+    color: black;
+}
