@@ -1,27 +1,27 @@
 <html>
   <head>
-    <!-- <script type="text/javascript"  -->
-    <!-- 	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> -->
-    <!-- </script> -->
-
-    <!-- <script type="text/x-mathjax-config"> -->
-    <!--   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); -->
-    <!-- </script> -->
-
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
+    <script type="text/javascript" 
+	    src="/home/prsteele/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script src="/home/prsteele/lib/d3/d3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="slide.js"></script>
 
-
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
   </head>
 
   <body>
     <div class="slide" onClick="foo()">
-      We can use standard $\LaTeX$ notation, such as $\int_a^b f(x) \;
-      d x$. We can even get equation-style markup, such as
-      \[
-      \int_a^b f(x) \;d x.
-      \]
+      <div>
+	<p>
+	  We can use standard $\LaTeX$ notation, such as $\int_a^b f(x) \;
+	  d x$. We can even get equation-style markup, such as
+	  \[
+	  \int_a^b f(x) \;d x.
+	  \]
+	</p>
+      </div>
     </div>
 
     <div class="slide">

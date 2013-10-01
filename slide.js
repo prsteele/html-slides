@@ -6,30 +6,27 @@ function init() {
     slide_ndx = 0;
 
     slides.style("display", "none");
-
     d3.select(".slide").style("display", "block");
+}
+
+function choose_current(d, i) {
+    if (i == slide_ndx) {
+    	d3.select(this).style("display", "block");
+    } else {
+    	d3.select(this).style("display", "none");
+    }
 }
 
 function previous() {
     if (slide_ndx > 0) {
-	d3.select(".slide:nth-child(" + slide_ndx + ")").transition().style("display", "none");
-	d3.select(".slide:nth-child(" + (slide_ndx - 1) + ")").transition().style("display", "block");
 	slide_ndx = slide_ndx - 1;
+	slides.each(choose_current);
     }
 }
 
 function next() {
-    if (slide_ndx < slides.size()) {
-	d3.select(".slide:nth-child(" + slide_ndx + ")").transition().style("display", "none");
-	d3.select(".slide:nth-child(" + (slide_ndx + 1) + ")").transition().style("display", "block");
+    if (slide_ndx < slides.size() - 1) {
 	slide_ndx = slide_ndx + 1;
+	slides.each(choose_current);
     }
-}
-
-function foo() {
-    var s1 = d3.select("#slide-1");
-    var s2 = d3.select("#slide-2");
-
-
-    s1.style("color", "red").transition().style("color", "blue");
 }
