@@ -20,16 +20,18 @@ var forwards = true;
 
 function init() {
     slides = d3.selectAll(".slide");
-    slide_ndx = 0;
-    slides.style("display", "none");
     current_slide = d3.select(".slide").style("display", "block");
+    slide_ndx = 0;
+
+    slides.each(choose_current);
 }
 
 function choose_current(d, i) {
     if (i == slide_ndx) {
 	current_slide = d3.select(this);
-	reveals = current_slide.selectAll(".reveal");
     	current_slide.style("display", "block");
+
+	reveals = current_slide.selectAll(".reveal");
 	reveal_ndx = forwards ? -1 : reveals.size() - 1;
 	reveals.each(choose_reveal);
     } else {
