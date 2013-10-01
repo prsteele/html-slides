@@ -21,7 +21,6 @@ var forwards = true;
 function init() {
     slides = d3.selectAll(".slide");
     slide_ndx = 0;
-
     slides.style("display", "none");
     current_slide = d3.select(".slide").style("display", "block");
 }
