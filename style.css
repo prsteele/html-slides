@@ -19,6 +19,10 @@
     padding-top: 1em;
 }
 
+.slide li:not(:first-child) {
+    padding-top: 1em;
+}
+
 .unrevealed {
     color: rgb(200, 200, 200);
 }
