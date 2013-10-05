@@ -16,104 +16,111 @@
   </head>
 
   <body>
-    <input type="button" value="previous" onClick="ss.previous()" />
-    <input type="button" value="next" onClick="ss.next()" />
 
-    <div class="slide">
-      We can use standard $\LaTeX$ notation, such as $\int_a^b f(x) \;
-      d x$.
-    </div>
+    <div id="slides">
+      <div class="navigation">
+	<input type="button" id="prev" value="previous" onClick="ss.previous()" />
+	<input type="button" id="next" value="next" onClick="ss.next()" />
+      </div>
 
-    <div class="slide">
-      We can even get equation-style markup, such as
-      \[
-      \int_a^b f(x) \;d x.
-      \]
-    </div>
+      <object id="logo" type="image/svg+xml" data="logo_big.svg"></object>
 
-    <div class="slide">
-      Let's get some lists going:
+      <div class="slide">
+	We can use standard $\LaTeX$ notation, such as $\int_a^b f(x) \;
+	d x$.
+      </div>
 
-      <ul>
-	<li>
-	  Daniel
-	</li>
-	<li>
-	  James
-	</li>
-	<li>
-	  Patrick
-	</li>
-	<li>
-	  Stephen
-	</li>
-      </ul>
-    </div>
+      <div class="slide">
+	We can even get equation-style markup, such as
+	\[
+	\int_a^b f(x) \;d x.
+	\]
+      </div>
 
-    <div class="slide">
-      Now let's try to transition each element in individually:
+      <div class="slide">
+	Let's get some lists going:
 
-      <ul>
-	<li class="reveal">
-	  Daniel
-	</li>
-	<li class="reveal">
-	  James
-	</li>
-	<li class="reveal">
-	  Patrick
-	</li>
-	<li class="reveal">
-	  Stephen
-	</li>
-      </ul>
-    </div>
+	<ul>
+	  <li>
+	    Daniel
+	  </li>
+	  <li>
+	    James
+	  </li>
+	  <li>
+	    Patrick
+	  </li>
+	  <li>
+	    Stephen
+	  </li>
+	</ul>
+      </div>
 
-    <div class="slide">
-      What happens if we nest reveals?
+      <div class="slide">
+	Now let's try to transition each element in individually:
 
-      <ul>
-	<li class="reveal">
-	  Daniel
-	  <ul>
-	    <li class="reveal">
-	      Fleischman
-	    </li>
-	  </ul>
-	</li>
-	<li class="reveal">
-	  James
-	  <ul>
-	    <li class="reveal">
-	      Davis
-	    </li>
-	  </ul>
-	</li>
-	<li class="reveal">
-	  Patrick
-	  <ul>
-	    <li class="reveal">
-	      Steele
-	    </li>
-	  </ul>
-	</li>
-	<li class="reveal">
-	  Stephen
-	  <ul>
-	    <li class="reveal">
-	      Pallone
-	    </li>
-	  </ul>
-	</li>
-      </ul>
-    </div>
+	<ul>
+	  <li class="reveal">
+	    Daniel
+	  </li>
+	  <li class="reveal">
+	    James
+	  </li>
+	  <li class="reveal">
+	    Patrick
+	  </li>
+	  <li class="reveal">
+	    Stephen
+	  </li>
+	</ul>
+      </div>
 
-    <div class="slide">
-      Another slide.
-    </div>
+      <div class="slide">
+	What happens if we nest reveals?
 
-    <div class="slide">
-      And another.
+	<ul>
+	  <li class="reveal">
+	    Daniel
+	    <ul>
+	      <li class="reveal">
+		Fleischman
+	      </li>
+	    </ul>
+	  </li>
+	  <li class="reveal">
+	    James
+	    <ul>
+	      <li class="reveal">
+		Davis
+	      </li>
+	    </ul>
+	  </li>
+	  <li class="reveal">
+	    Patrick
+	    <ul>
+	      <li class="reveal">
+		Steele
+	      </li>
+	    </ul>
+	  </li>
+	  <li class="reveal">
+	    Stephen
+	    <ul>
+	      <li class="reveal">
+		Pallone
+	      </li>
+	    </ul>
+	  </li>
+	</ul>
+      </div>
+
+      <div class="slide">
+	Another slide.
+      </div>
+
+      <div class="slide">
+	And another.
+      </div>
     </div>
   </body>
 </html>
