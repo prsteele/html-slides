@@ -18,6 +18,7 @@ var ss = (function () {
     Slide.prototype.display = function (display) {
 	this.selection.style("display", display ? "block" : "none");
 	this.display_stages();
+
     }
 
     /**
@@ -63,6 +64,8 @@ var ss = (function () {
 	// Construct all Slide objects from the selection, which will be stored in this.slides
 	this.slides = [];
 	slides.each(this.process_slide());
+
+	// Get the height of the logo, if any, and adjust the starting position
 
 	// Update the display
 	this.update();

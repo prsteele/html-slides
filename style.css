@@ -16,7 +16,21 @@
 }
 
 .slide {
- 
+    border-style: solid;
+    border-width: 1px;
+}
+
+.slide h2 {
+    margin-bottom: 100px;
+    width: 80%;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+#navigation {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 
 #logo {
