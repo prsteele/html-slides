@@ -16,9 +16,58 @@ var ss = (function () {
      * visibility rules for all stages as well.
      */
     Slide.prototype.display = function (display) {
-	this.selection.style("display", display ? "block" : "none");
-	this.display_stages();
+	if (display) {
+	    this.selection.style("display", "block");
+	    this.display_stages();
+	    this.fill();
+	} else {
+	    this.selection.style("display", "none");
+	}
+    }
 
+    /**
+     * Calling this function sets the heights of all "fill" class
+     * elements to the appropriate height.
+     */
+    Slide.prototype.fill = function () {
+	var fills = this.selection.selectAll(".fill");
+	if (fills.size() <= 0) {
+	    return;
+	}
+
+	// First, set the height of all fills to zero
+	fills.each(function (d, i) {
+	    d3.select(this).style("height", "0px");
+	});
+
+	// Now adjust the height of the elements to be the appropriate
+	// height
+	var full_height = parseInt(d3.select("#slides").style("height"), 10);
+	var slide_height = parseInt(this.selection.style("height"), 10);
+
+	// If we fail to parse the heights (somehow) return
+	if (isNaN(full_height) || isNaN(slide_height)) {
+	    return;
+	}
+
+	// If there is no room left for padding, do nothing
+	if (full_height <= slide_height) {
+	    return;
+	}
+
+	// Otherwise, increase the height of each element marked
+	// "fill" by `dh`
+	var dh = (full_height - slide_height) / fills.size();
+	fills.each(function (d, i) {
+	    var el = d3.select(this);
+
+	    var cur_height = parseInt(el.style("height"), 10);
+	    if (isNaN(cur_height)) {
+		return;
+	    } else {
+		el.style("height", dh + "px");
+	    }
+	});
     }
 
     /**
@@ -64,8 +113,6 @@ var ss = (function () {
 	// Construct all Slide objects from the selection, which will be stored in this.slides
 	this.slides = [];
 	slides.each(this.process_slide());
-
-	// Get the height of the logo, if any, and adjust the starting position
 
 	// Update the display
 	this.update();
